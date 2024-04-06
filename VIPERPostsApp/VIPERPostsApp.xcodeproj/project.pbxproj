@@ -19,6 +19,8 @@
 		895E115C2BC0159D003E0901 /* PostCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 895E115A2BC0159D003E0901 /* PostCell.xib */; };
 		895E115F2BC15FF7003E0901 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895E115E2BC15FF7003E0901 /* UITableView+Extension.swift */; };
 		895E11612BC16034003E0901 /* UIResponder+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895E11602BC16034003E0901 /* UIResponder+Extension.swift */; };
+		895E11652BC162C4003E0901 /* PostDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895E11632BC162C4003E0901 /* PostDetailViewController.swift */; };
+		895E11662BC162C4003E0901 /* PostDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 895E11642BC162C4003E0901 /* PostDetailViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		895E115A2BC0159D003E0901 /* PostCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostCell.xib; sourceTree = "<group>"; };
 		895E115E2BC15FF7003E0901 /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
 		895E11602BC16034003E0901 /* UIResponder+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIResponder+Extension.swift"; sourceTree = "<group>"; };
+		895E11632BC162C4003E0901 /* PostDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailViewController.swift; sourceTree = "<group>"; };
+		895E11642BC162C4003E0901 /* PostDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostDetailViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,8 +120,9 @@
 		895E114A2BC00DFE003E0901 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				895E114F2BC00FED003E0901 /* Splash */,
+				895E11622BC16294003E0901 /* PostDetail */,
 				895E114B2BC00E07003E0901 /* PostList */,
+				895E114F2BC00FED003E0901 /* Splash */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -171,6 +176,15 @@
 				895E11602BC16034003E0901 /* UIResponder+Extension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		895E11622BC16294003E0901 /* PostDetail */ = {
+			isa = PBXGroup;
+			children = (
+				895E11632BC162C4003E0901 /* PostDetailViewController.swift */,
+				895E11642BC162C4003E0901 /* PostDetailViewController.xib */,
+			);
+			path = PostDetail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,6 +246,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				895E11552BC011DA003E0901 /* PostListViewController.xib in Resources */,
+				895E11662BC162C4003E0901 /* PostDetailViewController.xib in Resources */,
 				895E113F2BC00DC3003E0901 /* LaunchScreen.storyboard in Resources */,
 				895E115C2BC0159D003E0901 /* PostCell.xib in Resources */,
 				895E113C2BC00DC3003E0901 /* Assets.xcassets in Resources */,
@@ -247,6 +262,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				895E11542BC011DA003E0901 /* PostListViewController.swift in Sources */,
+				895E11652BC162C4003E0901 /* PostDetailViewController.swift in Sources */,
 				895E11612BC16034003E0901 /* UIResponder+Extension.swift in Sources */,
 				895E11332BC00DC1003E0901 /* AppDelegate.swift in Sources */,
 				895E11352BC00DC1003E0901 /* SceneDelegate.swift in Sources */,

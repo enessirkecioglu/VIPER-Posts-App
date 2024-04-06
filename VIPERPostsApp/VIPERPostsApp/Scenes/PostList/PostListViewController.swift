@@ -37,4 +37,9 @@ extension PostListViewController: UITableViewDelegate, UITableViewDataSource {
         return tableView.dequeueReusableCell(withIdentifier: PostCell.identifier, for: indexPath)
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let postDetailVC = PostDetailViewController()
+        navigationController?.pushViewController(postDetailVC, animated: true)
+    }
+    
 }
