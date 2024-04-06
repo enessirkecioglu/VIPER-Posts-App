@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PostListViewController" customModule="VIPERPostsApp" customModuleProvider="target">
             <connections>
+                <outlet property="tableView" destination="nWf-bn-7QK" id="cH9-Xn-NLx"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -18,18 +19,18 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="POSTs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="btM-0m-cAC">
-                    <rect key="frame" x="136" y="404" width="121" height="44.333333333333314"/>
-                    <fontDescription key="fontDescription" name="Palatino-BoldItalic" family="Palatino" pointSize="40"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="nWf-bn-7QK">
+                    <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="btM-0m-cAC" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="IPV-4n-2jI"/>
-                <constraint firstItem="btM-0m-cAC" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="bdw-Bm-pqx"/>
+                <constraint firstItem="nWf-bn-7QK" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="93N-WO-SaU"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="nWf-bn-7QK" secondAttribute="trailing" id="Avh-aE-9Mh"/>
+                <constraint firstItem="nWf-bn-7QK" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Eso-g3-UDn"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="nWf-bn-7QK" secondAttribute="bottom" id="tYa-Yi-Npx"/>
             </constraints>
             <point key="canvasLocation" x="37" y="20"/>
         </view>

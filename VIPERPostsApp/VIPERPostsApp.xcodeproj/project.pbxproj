@@ -15,6 +15,10 @@
 		895E11512BC00FFD003E0901 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895E11502BC00FFD003E0901 /* SplashViewController.swift */; };
 		895E11542BC011DA003E0901 /* PostListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895E11522BC011DA003E0901 /* PostListViewController.swift */; };
 		895E11552BC011DA003E0901 /* PostListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 895E11532BC011DA003E0901 /* PostListViewController.xib */; };
+		895E115B2BC0159D003E0901 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895E11592BC0159D003E0901 /* PostCell.swift */; };
+		895E115C2BC0159D003E0901 /* PostCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 895E115A2BC0159D003E0901 /* PostCell.xib */; };
+		895E115F2BC15FF7003E0901 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895E115E2BC15FF7003E0901 /* UITableView+Extension.swift */; };
+		895E11612BC16034003E0901 /* UIResponder+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895E11602BC16034003E0901 /* UIResponder+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +32,10 @@
 		895E11502BC00FFD003E0901 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		895E11522BC011DA003E0901 /* PostListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListViewController.swift; sourceTree = "<group>"; };
 		895E11532BC011DA003E0901 /* PostListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostListViewController.xib; sourceTree = "<group>"; };
+		895E11592BC0159D003E0901 /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		895E115A2BC0159D003E0901 /* PostCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostCell.xib; sourceTree = "<group>"; };
+		895E115E2BC15FF7003E0901 /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
+		895E11602BC16034003E0901 /* UIResponder+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIResponder+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,11 +68,13 @@
 		895E11312BC00DC1003E0901 /* VIPERPostsApp */ = {
 			isa = PBXGroup;
 			children = (
-				895E114A2BC00DFE003E0901 /* Scenes */,
-				895E11492BC00DDC003E0901 /* SupportingFiles */,
-				895E11482BC00DD7003E0901 /* Resources */,
-				895E11472BC00DD0003E0901 /* Storyboards */,
 				895E11462BC00DC9003E0901 /* Application */,
+				895E11562BC01560003E0901 /* Components */,
+				895E115D2BC15FD7003E0901 /* Extensions */,
+				895E11482BC00DD7003E0901 /* Resources */,
+				895E114A2BC00DFE003E0901 /* Scenes */,
+				895E11472BC00DD0003E0901 /* Storyboards */,
+				895E11492BC00DDC003E0901 /* SupportingFiles */,
 			);
 			path = VIPERPostsApp;
 			sourceTree = "<group>";
@@ -129,6 +139,40 @@
 			path = Splash;
 			sourceTree = "<group>";
 		};
+		895E11562BC01560003E0901 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				895E11572BC01567003E0901 /* TableViewCells */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		895E11572BC01567003E0901 /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				895E11582BC0157F003E0901 /* PostCell */,
+			);
+			path = TableViewCells;
+			sourceTree = "<group>";
+		};
+		895E11582BC0157F003E0901 /* PostCell */ = {
+			isa = PBXGroup;
+			children = (
+				895E11592BC0159D003E0901 /* PostCell.swift */,
+				895E115A2BC0159D003E0901 /* PostCell.xib */,
+			);
+			path = PostCell;
+			sourceTree = "<group>";
+		};
+		895E115D2BC15FD7003E0901 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				895E115E2BC15FF7003E0901 /* UITableView+Extension.swift */,
+				895E11602BC16034003E0901 /* UIResponder+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -189,6 +233,7 @@
 			files = (
 				895E11552BC011DA003E0901 /* PostListViewController.xib in Resources */,
 				895E113F2BC00DC3003E0901 /* LaunchScreen.storyboard in Resources */,
+				895E115C2BC0159D003E0901 /* PostCell.xib in Resources */,
 				895E113C2BC00DC3003E0901 /* Assets.xcassets in Resources */,
 				895E113A2BC00DC1003E0901 /* Main.storyboard in Resources */,
 			);
@@ -202,9 +247,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				895E11542BC011DA003E0901 /* PostListViewController.swift in Sources */,
+				895E11612BC16034003E0901 /* UIResponder+Extension.swift in Sources */,
 				895E11332BC00DC1003E0901 /* AppDelegate.swift in Sources */,
 				895E11352BC00DC1003E0901 /* SceneDelegate.swift in Sources */,
 				895E11512BC00FFD003E0901 /* SplashViewController.swift in Sources */,
+				895E115B2BC0159D003E0901 /* PostCell.swift in Sources */,
+				895E115F2BC15FF7003E0901 /* UITableView+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
