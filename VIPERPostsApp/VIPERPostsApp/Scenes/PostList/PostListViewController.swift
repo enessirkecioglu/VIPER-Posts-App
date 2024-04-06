@@ -25,6 +25,19 @@ final class PostListViewController: UIViewController {
         
         tableView.register(PostCell.self)
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        NetworkManager.shared.fetchData(from: .getPosts, dataType: [PostListResponse].self) { result in
+            switch result {
+            case .success(let response):
+                guard let response else { return }
+                print(response)
+            case .failure(_):
+                break
+            }
+        }
+    }
 
 }
 
