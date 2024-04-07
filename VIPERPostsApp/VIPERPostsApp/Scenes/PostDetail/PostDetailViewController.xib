@@ -10,6 +10,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PostDetailViewController" customModule="VIPERPostsApp" customModuleProvider="target">
             <connections>
+                <outlet property="bodyLabel" destination="RGf-Rc-HNN" id="GEj-Q3-2gC"/>
+                <outlet property="titleLabel" destination="Pog-yd-HeY" id="E2B-il-2r1"/>
+                <outlet property="userNameLabel" destination="pGN-E7-k8H" id="R0l-BO-MmC"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

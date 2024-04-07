@@ -32,15 +32,15 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f0y-7P-dfe">
-                        <rect key="frame" x="16" y="72" width="394" height="21"/>
+                        <rect key="frame" x="16" y="64" width="394" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Lorem Ipsum Lorem Ipsum " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PKH-K9-ydB">
-                        <rect key="frame" x="16" y="101" width="394" height="87"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Lorem Ipsum Lorem Ipsum " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PKH-K9-ydB">
+                        <rect key="frame" x="16" y="93" width="394" height="95"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WUp-hj-fIc">
@@ -57,7 +57,7 @@
                     <constraint firstItem="WUp-hj-fIc" firstAttribute="top" secondItem="PKH-K9-ydB" secondAttribute="bottom" constant="12" id="1wq-mz-9R4"/>
                     <constraint firstItem="2ay-l3-Ur4" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="3Mg-AD-t8w"/>
                     <constraint firstAttribute="trailing" secondItem="WUp-hj-fIc" secondAttribute="trailing" constant="16" id="AsP-0l-Vcd"/>
-                    <constraint firstItem="f0y-7P-dfe" firstAttribute="top" secondItem="2ay-l3-Ur4" secondAttribute="bottom" constant="24" id="Vq3-9t-4G0"/>
+                    <constraint firstItem="f0y-7P-dfe" firstAttribute="top" secondItem="2ay-l3-Ur4" secondAttribute="bottom" constant="16" id="Vq3-9t-4G0"/>
                     <constraint firstAttribute="trailing" secondItem="PKH-K9-ydB" secondAttribute="trailing" constant="16" id="XH3-l6-kYq"/>
                     <constraint firstItem="WUp-hj-fIc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="aCp-OT-3vK"/>
                     <constraint firstItem="PKH-K9-ydB" firstAttribute="top" secondItem="f0y-7P-dfe" secondAttribute="bottom" constant="8" id="dIr-PJ-Bff"/>
@@ -69,6 +69,11 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="bodyLabel" destination="PKH-K9-ydB" id="ybk-Mf-zAi"/>
+                <outlet property="titleLabel" destination="f0y-7P-dfe" id="ovZ-SO-GVo"/>
+                <outlet property="userNameLabel" destination="jS1-yw-XRW" id="pCh-45-Kfa"/>
+            </connections>
             <point key="canvasLocation" x="117.55725190839694" y="76.408450704225359"/>
         </tableViewCell>
     </objects>

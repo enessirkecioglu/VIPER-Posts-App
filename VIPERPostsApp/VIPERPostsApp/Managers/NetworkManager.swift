@@ -9,10 +9,11 @@ import Foundation
 
 enum Endpoints {
     case getPosts
+    case getPostDetail(postId: Int)
     
     var method: String {
         switch self {
-        case .getPosts:
+        case .getPosts, .getPostDetail:
             return "GET"
         }
     }
@@ -21,10 +22,12 @@ enum Endpoints {
         switch self {
         case .getPosts:
             return "/posts"
+        case .getPostDetail(let postId):
+            return "/posts/\(postId)"
         }
     }
     
-    var params: String? {
+    var urlParameters: String? {
         return nil
     }
 }
