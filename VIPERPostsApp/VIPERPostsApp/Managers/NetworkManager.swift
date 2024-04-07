@@ -7,6 +7,8 @@
 
 import Foundation
 
+let dummyUserNames: [String] = ["Benjamin Wyss", "Damian K. Whitaker", "Tabitha C. Schuster", "Annette J. Strickland", "Helen D. Greenwood"]
+
 enum Endpoints {
     case getPosts
     case getPostDetail(postId: Int)

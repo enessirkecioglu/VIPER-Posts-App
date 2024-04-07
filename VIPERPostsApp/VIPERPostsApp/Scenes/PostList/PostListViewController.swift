@@ -7,18 +7,17 @@
 
 import UIKit
 
-let dummyUserNames: [String] = ["Benjamin Wyss", "Damian K. Whitaker", "Tabitha C. Schuster", "Annette J. Strickland", "Helen D. Greenwood"]
+protocol PostListView: BaseView {
+    func setPostList()
+}
 
-final class PostListViewController: UIViewController {
+final class PostListViewController: UIViewController, PostListView {
     @IBOutlet private weak var tableView: UITableView!
     
-    var postList: [PostListResponse] = [] {
-        didSet {
-            self.tableView.reloadData()
-        }
-    }
+    var presenter: PostListPresenter
     
-    init() {
+    init(presenter: PostListPresenter) {
+        self.presenter = presenter
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -36,29 +35,22 @@ final class PostListViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        NetworkManager.shared.fetchData(from: .getPosts, dataType: [PostListResponse].self) { [weak self] result in
-            switch result {
-            case .success(let response):
-                guard let response else { return }
-                DispatchQueue.main.async {
-                    self?.postList = response
-                }
-            case .failure(_):
-                break
-            }
-        }
+        presenter.viewWillAppear()
     }
-
+    
+    func setPostList() {
+        tableView.reloadData()
+    }
 }
 
 extension PostListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return postList.count
+        return presenter.postList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: PostCell.identifier, for: indexPath) as! PostCell
-        let model = postList[indexPath.row]
+        let model = presenter.postList[indexPath.row]
         let userName = dummyUserNames[model.userId ?? 0 % dummyUserNames.count]
         let uiModel = PostCellUI(userName: userName, titleText: model.title ?? "", bodyText: model.body ?? "")
         cell.configure(with: uiModel)
@@ -66,9 +58,7 @@ extension PostListViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let postDetailVC = PostDetailViewController()
-        postDetailVC.postId = postList[indexPath.row].id
-        navigationController?.pushViewController(postDetailVC, animated: true)
+        presenter.didSelectRow(at: indexPath)
     }
     
 }
